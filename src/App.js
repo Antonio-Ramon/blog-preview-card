@@ -1,43 +1,42 @@
-import './App.css';
+import "./App.css";
 
 function App() {
+	const image = {
+		src: "./blog-image.png",
+	};
 
-  const image = {
-    src: './blog-image.png',
-  }
+	const author = {
+		src: "./profile-picture.png",
+		height: "32",
+		name: "Antonio Ramon",
+	};
 
-  const author = {
-    src: './profile-picture.png',
-    height: '32',
-    name: 'Antonio Ramon'
-  }
+	return (
+		<div className="App">
+			<article className="card">
+				<div className="image">
+					<img src={image.src} alt="Card blog image."/>
+				</div>
 
-  return (
-    <div className="App">
-      <div className="card">
-        <div className="image">
-          <img  src={image.src} alt="" srcset="" />
-        </div>
+				<main className="content">
+					<button className="badge">
+						<span>Learning</span>
+					</button>
+					<span>Published 21 Dec 2023</span>
+					<header>HTML & CSS foundations</header>
+					<span>
+						These languages are the backbone of every website, defining
+						structure, content, and presentation.
+					</span>
+				</main>
 
-        <div className="content">
-          <button className="badge">
-            <span>Learning</span>
-          </button>
-          <span>Published 21 Dec 2023</span>
-          <span>HTML & CSS foundations</span>
-          <span>
-            These languages are the backbone of every website, 
-            defining structure, content, and presentation.
-          </span>
-        </div>
-
-        <div className="author-info">
-          <img src={author.src} height={author.height} alt="" />
-          <span>{author.name}</span>
-        </div>        
-      </div>
-    </div>
-  );
+				<footer className="author-info">
+					<img src={author.src} height={author.height} alt="Image of blog's author." />
+					<span>{author.name}</span>
+				</footer>
+			</article>
+		</div>
+	);
 }
 
 export default App;
