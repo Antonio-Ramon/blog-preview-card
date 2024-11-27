@@ -1,23 +1,41 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
+  const image = {
+    src: './blog-image.png',
+  }
+
+  const author = {
+    src: './profile-picture.png',
+    height: '32',
+    name: 'Antonio Ramon'
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="card">
+        <div className="image">
+          <img  src={image.src} alt="" srcset="" />
+        </div>
+
+        <div className="content">
+          <button className="badge">
+            <span>Learning</span>
+          </button>
+          <span>Published 21 Dec 2023</span>
+          <span>HTML & CSS foundations</span>
+          <span>
+            These languages are the backbone of every website, 
+            defining structure, content, and presentation.
+          </span>
+        </div>
+
+        <div className="author-info">
+          <img src={author.src} height={author.height} alt="" />
+          <span>{author.name}</span>
+        </div>        
+      </div>
     </div>
   );
 }
